@@ -1,0 +1,438 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 上面是css reset的語法 */
+
+.wrap {
+    margin: 0 auto;
+    max-width: 1024px;
+    font-family: verdana;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+/* 社群連結、選單 */
+.bar {
+    background: #f6f6f6;
+    padding: 1% 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.bar ul li {
+    margin: 5px;
+}
+
+.bar li a {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.bar li img {
+    margin-right: 5px;
+}
+
+.facebook span {
+    border-right: 2px solid #cccccc;
+    padding-right: 8px;
+}
+
+.twitter span {
+    color: #00aaed;
+    margin-right: 13px;
+}
+
+.twitter img {
+    width: 16px;
+    height: 16px;
+    padding-left: 8px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 50%;
+}
+
+.header h1 a {
+    background-image: url(../img/images/logo.png);
+    width: 170px;
+    height: 36px;
+    margin: 8px 0 0 18px;
+    display: block;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu_list {
+    margin: 5px 10px;
+    text-align: center;
+}
+
+.menu>li>a {
+    display: block;
+    /* 增加使用者點擊空間 */
+    font-size: 18px;
+    text-decoration: none;
+    color: #21d4a7;
+    padding: 10px;
+    transition: all 0.3s;
+    /* 消除a:hover產生的跳動 */
+    border-bottom: 5px solid transparent;
+}
+
+.dropdown:hover {
+    border-bottom: 5px solid #00f5a8;
+}
+
+.menu>li>a.active {
+    border-bottom: 5px solid #00f5a8;
+}
+
+
+/* 產品介紹下拉式選單 */
+.dropdown-list {
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+}
+
+.dropdown-list li a {
+    width: 92px;
+    background: rgba(255, 255, 255, 0.98);
+    display: block;
+    /* 增加使用者點擊空間 */
+    font-size: 18px;
+    text-decoration: none;
+    color: #21d4a7;
+    padding: 10px;
+    text-align: center;
+}
+
+.dropdown-list a:hover {
+    background: #00aaed;
+    color: white;
+}
+
+.menu ul {
+    display: none;
+}
+
+/* swiper輪播效果 */
+.swiper {
+    width: 1024px;
+    height: 350px;
+    position: relative;
+}
+
+.swiper-slide.banner1 img {
+    height: auto;
+    object-fit: cover;
+}
+
+
+.banner1 h2 {
+    width: 1002px;
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 32px;
+    font-weight: bold;
+    padding: 30px 20px;
+    z-index: 9;
+    position: absolute;
+    top: 35%;
+}
+
+
+/* 課程介紹 */
+.course {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 60px 0px;
+}
+
+.course_item {
+    width: 300px;
+    margin: 0 auto;
+    padding: 15px;
+    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 20%);
+}
+
+.course_img {
+    display: block;
+    margin: auto;
+    height: 150px;
+    object-fit: contain;
+    max-width: 100%;
+}
+
+.course h3 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+.course_item p {
+    margin-top: 10px;
+    padding: 0 10px;
+    line-height: 24px;
+}
+
+.course_item ul {
+    margin-left: 30px;
+    list-style-type: disc;
+}
+
+/* 課程比較表 */
+.compare h3 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.compare_table {
+    width: 85%;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.compare_table th {
+    background-color: #f7f7f7;
+}
+
+.compare_table th, .compare_table td {
+    width: 25%;
+    font-weight: bold;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 12px;
+}
+
+.compare_table .style {
+    color: #1fb48f;
+}
+
+.background h3 {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 3% 0;
+    letter-spacing: 1px;
+    line-height: 32px;
+}
+
+/* 聯絡我們 */
+.inform {
+    margin-top: 60px;
+}
+
+.inform .background {
+    width: 85%;
+    margin: 3% auto;
+    padding: 3%;
+    background: -webkit-linear-gradient(#00664b, #009771);
+    background: linear-gradient(#00664b, #009771);
+}
+
+.personalInform {
+    display: flex;
+}
+
+.personalInfo {
+    display: flex;
+    flex-wrap: wrap;
+    width: 48%;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.personalInfo input {
+    width: 100%;
+    margin: 5px 0px 15px 0px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+.personalInfo label {
+    color: white;
+}
+
+.personalInform textarea {
+    width: 48%;
+    margin: 0px 38px 30px 15px;
+}
+
+.personalInfo .submitBtn {
+    width: 20%;
+    margin-left: auto;
+    display: block;
+    background: #00cc99;
+    color: white;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 42px 57px 20px;
+}
+
+.contact li a {
+    color: #e12d80;
+    text-decoration: none;
+}
+
+/* top效果 */
+.top {
+    position: fixed;
+    bottom: 0;
+    right: 20%;
+    z-index: 12;
+    font-size: 50px;
+
+}
+
+/* RWD 響應式 */
+@media (max-width: 767px) {
+    i {
+        position: fixed;
+        bottom: 0;
+        right: 1%;
+        font-size: 40px;
+    }
+
+    .swiper {
+        width: 100%;
+        object-fit: fill;
+    }
+
+    .bar {
+        justify-content: flex-start;
+        padding-left: 1%;
+    }
+
+    .header {
+        flex: auto;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .header h1 {
+        margin: 0 2%;
+    }
+
+    .menu li {
+        margin: 0 1%;
+    }
+
+    .banner {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .course {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course_item {
+        margin: auto;
+    }
+
+}
+
+@media (max-width:569px) {
+
+    .personalInform {
+        flex-direction: column;
+    }
+
+    .personalInfo {
+        width: 80%;
+        margin-left: 5%;
+    }
+
+    .personalInform textarea {
+        width: 90%;
+        margin: 5% 1%;
+    }
+
+    .background h3 {
+        padding: 2%;
+    }
+
+    .footer {
+        flex-direction: column;
+        margin: 5% 5%;
+    }
+
+    .contact {
+        margin: 5% 0;
+    }
+}
