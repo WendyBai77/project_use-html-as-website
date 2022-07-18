@@ -55,6 +55,11 @@ table {
 
 /* 上面是css reset的語法 */
 
+/* 可直接在body下全域設定，如果其中一兩個小地方要不一樣再額外覆蓋樣式就好 */
+body {
+    font-family: verdana, sans-serif;
+  }
+
 .wrap {
     margin: 0 auto;
     max-width: 1024px;
